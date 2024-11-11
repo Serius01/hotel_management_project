@@ -1,0 +1,92 @@
+# Виртуальное окружение
+venv/
+ENV/
+.env/
+.env.*
+
+# Файлы кеша
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.pyo
+*.pyd
+
+# Логи
+logs/
+*.log
+debug.log
+
+# Настройки среды
+.DS_Store
+*.env
+*.ini
+
+# Node.js (если есть фронтенд на Node)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# IDE
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Docker
+docker-compose.override.yml
+
+# Конфигурация ОС и временные файлы
+*.swp
+*.swo
+*~
+Thumbs.db
+desktop.ini
+
+# GitHub Actions
+.github/
+
+# Sentry и другие конфиденциальные настройки
+.sentrycli
+.sentrycli.*
+config.local.yaml
+
+# Резервные копии
+*.bak
+*.backup
+*.old
+
+# Сервисные файлы (например, PowerShell скрипты для Windows)
+*.ps1
+*.bat
+
+# Исключаем конкретные файлы виртуального окружения, если они добавились
+venv/Lib/site-packages/yaml/
+
+# Фронтенд сборки и зависимости
+hotel_frontend/node_modules/
+hotel_frontend/dist/
+hotel_frontend/.env.local
+hotel_frontend/.env.development
+hotel_frontend/.env.production
+hotel_frontend/.cache/
+hotel_frontend/.next/  # Если используется Next.js
+hotel_frontend/out/    # Для статических сборок Next.js
+hotel_frontend/.nuxt/  # Если используется Nuxt.js (для Vue.js)
+hotel_frontend/public/static/
+
+# Логи и отладочные файлы фронтенда
+hotel_frontend/npm-debug.log*
+hotel_frontend/yarn-error.log*
+hotel_frontend/pnpm-debug.log*
+
+# Конфигурации ОС и временные файлы
+hotel_frontend/Thumbs.db
+hotel_frontend/desktop.ini
+hotel_frontend/*.swp
+hotel_frontend/*.swo
+hotel_frontend/*~
+
+# Настройки IDE, специфичные для фронтенда
+hotel_frontend/.idea/
+hotel_frontend/.vscode/
+Объяснение:

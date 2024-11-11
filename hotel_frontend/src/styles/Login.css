@@ -1,0 +1,194 @@
+
+/* Универсальные стили для всех элементов */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Применение шрифта ко всему приложению и сброс отступов */
+body, html {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Корневой элемент приложения */
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* Убедитесь, что здесь нет ограничений по ширине, которые могут повлиять на форму */
+}
+
+/* CSS Переменные для удобства управления цветами и размерами */
+:root {
+    --primary-color: #000000; /* Основной цвет */
+    --secondary-color: #333333; /* Вторичный цвет */
+    --background-color: #121212; /* Тёмный фон */
+    --font-family: 'Montserrat', sans-serif;
+    --font-size-base: 16px;
+    --font-size-large: 24px;
+    --input-border-color: #cccccc;
+    --input-border-radius: 8px;
+    --button-hover-bg: #333333;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    --text-color: #333333;
+    --error-color: red;
+}
+
+/* Контейнер для страницы входа */
+.login-page__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background-color); /* Тёмный фон */
+}
+
+/* Обёртка формы входа */
+.login-form-wrapper {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 30px;
+    overflow: hidden;
+    height: 581px;
+    width: 780px;
+    box-shadow: 0 4px 32px var(--shadow-color);
+    /* Переход для плавного изменения */
+    transition: box-shadow 0.3s ease;
+}
+
+/* Фон с изображением */
+.background-image {
+    position: relative;
+    flex: 1.5;
+    background-image: url('/assets/1.jpg'); /* Путь к изображению */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Полупрозрачный чёрный оверлей на изображении */
+.background-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--shadow-color); /* Полупрозрачный чёрный оверлей */
+}
+
+/* Логотип */
+.logo {
+    display: block;
+    margin: 0 auto 30px;
+    height: 20%; 
+    
+}
+
+/* Секция формы */
+.form-section {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff; /* Белый фон для формы */
+}
+
+/* Заголовок формы */
+.form-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: var(--font-size-large);
+    color: var(--text-color);
+}
+
+/* Поля ввода */
+.input-field {
+    width: 100%; /* Задает одинаковую ширину */
+    max-width: 300px; /* Максимальная ширина */
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid var(--input-border-color);
+    border-radius: var(--input-border-radius);
+    font-size: 16px; /* Увеличен для лучшей читабельности */
+    transition: border-color 0.3s ease;
+}
+
+/* Фокус на полях ввода */
+.input-field:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* Кнопка отправки */
+.submit-button {
+    width: 100%; /* Задает одинаковую ширину */
+    max-width: 300px; /* Максимальная ширина */
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: var(--input-border-radius);
+    font-size: 16px; /* Увеличен для лучшей читабельности */
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Ховер для кнопки отправки */
+.submit-button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+/* Сообщение об ошибке */
+.error-message {
+    color: var(--error-color);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .login-form-wrapper {
+        flex-direction: column;
+        height: auto;
+        width: 90%;
+    }
+
+    .background-image {
+        display: none; /* Скрыть изображение на мобильных устройствах */
+    }
+
+    .form-section {
+        padding: 20px;
+    }
+
+    .input-field, .submit-button {
+        max-width: 100%;
+    }
+
+    .form-title {
+        font-size: 20px;
+    }
+}
+
+/* Дополнительные стили для улучшения UX */
+.input-field:disabled, .submit-button:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+
+/* Фокус для кнопок */
+.submit-button:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Плавное изменение теней при наведении */
+.login-form-wrapper:hover {
+    box-shadow: 0 6px 36px var(--shadow-color);
+}

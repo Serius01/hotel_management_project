@@ -1,0 +1,13 @@
+/* src/styles/ActivityLogTab.css */
+
+.activity-log-filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .activity-log-filters input,
+  .activity-log-filters select {
+    padding: 5px;
+  }
+  

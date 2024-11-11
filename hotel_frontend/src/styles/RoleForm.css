@@ -1,0 +1,33 @@
+/* src/styles/RoleForm.css */
+
+.role-form {
+    max-width: 500px;
+    margin: 20px auto;
+  }
+  
+  .role-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .role-form input,
+  .role-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .role-form button {
+    padding: 10px 20px;
+  }
+  
+  .permissions-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .permissions-list div {
+    width: 50%;
+    margin-bottom: 10px;
+  }
+  

@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",                    // Директория для выходных файлов
+    "module": "CommonJS",                  // Использование CommonJS модулей для Node.js
+    "target": "ES2020",                    // Обновленная версия JavaScript
+    "lib": ["ES2020"],                     // Использование библиотек ES2020
+    "sourceMap": true,                     // Генерация source maps для отладки
+    "strict": true,                        // Включить строгую типизацию
+    "noImplicitAny": true,                 // Запрет на неявный тип any
+    "rootDir": "src",                      // Указание корневой директории
+    "removeComments": true,                // Удаление комментариев для уменьшения размера финального кода
+    "declaration": true                    // Генерация файлов типов (.d.ts)
+  },
+  "include": ["src/**/*"],                 // Включить все файлы из src
+  "exclude": ["node_modules"]              // Исключить папку node_modules
+}

@@ -1,0 +1,13 @@
+/* src/styles/UsersTab.css */
+
+.user-filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .user-filters input,
+  .user-filters select {
+    padding: 5px;
+  }
+  

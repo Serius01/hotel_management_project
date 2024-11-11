@@ -1,0 +1,29 @@
+/* src/styles/UserForm.css */
+
+.user-form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .user-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .user-form input,
+  .user-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .user-form .error {
+    color: red;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+  }
+  
+  .user-form button {
+    padding: 10px 20px;
+  }
+  

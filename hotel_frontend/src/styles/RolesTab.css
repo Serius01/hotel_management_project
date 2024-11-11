@@ -1,0 +1,21 @@
+/* src/styles/RolesTab.css */
+
+.role-table-container {
+    margin-top: 20px;
+  }
+  
+  .role-form {
+    max-width: 500px;
+    margin: 20px auto;
+  }
+  
+  .permissions-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .permissions-list div {
+    width: 50%;
+    margin-bottom: 10px;
+  }
+  

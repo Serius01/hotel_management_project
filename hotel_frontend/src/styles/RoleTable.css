@@ -1,0 +1,20 @@
+/* src/styles/RoleTable.css */
+
+.role-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.role-table th,
+.role-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.role-table th {
+  background-color: #f0f0f0;
+}
+
+.role-table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}

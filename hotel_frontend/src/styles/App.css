@@ -1,0 +1,132 @@
+/* Добавление шрифта Montserrat */
+/* Рекомендуется перенести импорт шрифта в <head> вашего HTML файла для улучшения производительности */
+
+/* Сброс стилей для всех элементов */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Применение шрифта ко всему приложению */
+body, html {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* CSS-переменные */
+:root {
+  --primary-color: #646cff;
+  --primary-color-hover: #535bf2;
+  --text-color: #888;
+  --background-color: #fff;
+  --border-radius: 8px;
+  --font-family: 'Montserrat', sans-serif;
+  --transition-duration: 0.3s;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Основной контейнер приложения */
+.app-container {
+  display: flex;
+  min-height: 100vh; /* Занимаем всю высоту экрана */
+}
+
+/* Стили для бокового меню */
+.sidebar {
+  width: 250px;
+  /* Другие стили для бокового меню */
+}
+
+/* Стили для главного контента */
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Стили для корневого элемента приложения */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+
+
+/* Применение анимации при отсутствии предпочтений к сниженной анимации */
+@media (prefers-reduced-motion: no-preference) {
+  .logo.react {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Карточка для контента */
+.card {
+  padding: 2em;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px var(--shadow-color); /* Легкая тень для глубины */
+  margin-bottom: 1.5em; /* Добавляем нижний отступ */
+}
+
+/* Стиль для ссылок */
+.read-the-docs {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition-duration);
+}
+
+.read-the-docs:hover {
+  color: var(--primary-color);
+  text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+/* Универсальные стили для адаптивности */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column; /* Переход на вертикальное расположение */
+  }
+
+  .sidebar {
+    width: 100%; /* Боковое меню занимает всю ширину */
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .logo {
+    height: 4em;
+    padding: 1em;
+  }
+}
+
+/* Стили для кнопок */
+button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-family: var(--font-family);
+  transition: background-color var(--transition-duration);
+}
+
+button:hover {
+  background-color: var(--primary-color-hover);
+}
+
+button:focus {
+  outline: 2px solid var(--primary-color-hover);
+  outline-offset: 2px;
+}
+
+/* Стили для списков */
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
